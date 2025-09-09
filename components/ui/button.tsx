@@ -11,7 +11,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
         customRed: "bg-red-500 text-white hover:bg-red-600",
-        customOrange: "bg-streamr/80 text-black hover:bg-streamr",
+        customOrange: "bg-streamr/90 text-black hover:bg-streamr",
         customgray: "bg-gray-100 text-black hover:bg-gray-200",
         destructive: "bg-destructive text-white shadow-xs hover:bg-destructive/90",
         outline: "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground",
@@ -25,6 +25,7 @@ const buttonVariants = cva(
         md: "h-8 px-4 text-xs",
         lg: "h-12 px-8 text-lg",
         icon: "size-7",
+        responsive: "px-3 py-2 h-7 text-xs md:px-4 md:h-9 lg:h-10 lg:px-6 lg:text-sm",
       },
       radius: {
         none: "rounded-none",

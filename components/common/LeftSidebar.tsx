@@ -3,7 +3,6 @@ import { IoMdHome, IoIosAddCircle } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa6";
-
 import {
   Sidebar,
   SidebarContent,
@@ -12,7 +11,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -30,11 +28,7 @@ export const LeftSidebar: React.FC = () => {
   const path = usePathname();
 
   return (
-    <Sidebar
-  side="left"
-  className=" text-muted-foreground font-md bg-secondary transition-colors duration-300
-             h-[calc(100vh-115px)] mt-[60px] rounded-xl shadow-md overflow-hidden"
->
+    <Sidebar side="left" className=" text-muted-foreground font-md bg-secondary transition-colors duration-300 h-[calc(100vh-115px)] mt-[60px] rounded-xl shadow-md overflow-hidden">
   <SidebarContent className="bg-secondary transition-colors duration-300">
     <SidebarGroup>
       <SidebarGroupContent>

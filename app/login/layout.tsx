@@ -1,5 +1,7 @@
-import LoginHeader from '@/components/common/LoginHeader';
-import React from 'react'
+
+import LoginHeader from "@/components/LoginPage/LoginHeader";
+import { LoginProvider } from "@/context/LoginProvider";
+import React from "react";
 
 const layout = ({
   children,
@@ -7,12 +9,11 @@ const layout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div className=' bg-white dark:bg-black text-black dark:text-white transition-colors duration-300'>
-      
-      <LoginHeader/>
+    <LoginProvider>
+      <LoginHeader />
       {children}
-    </div>
-  )
-}
+    </LoginProvider>
+  );
+};
 
-export default layout
+export default layout;
