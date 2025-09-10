@@ -1,4 +1,4 @@
-import { SidebarProvider } from "@/components/ui/sidebar";
+
 import Provider from "./Provider";
 
 const layout = ({

@@ -3,6 +3,7 @@ export const getPlaylistInfo = () => {
     name: "Chill Beats",
     likes: "120",
     createdBy: "Sophia",
+    createrProfile:"/profile.png",
     profileUrl:"/profile",
     bio:"A collection of heart-touching melodies for the days when words aren’t enough."
   };

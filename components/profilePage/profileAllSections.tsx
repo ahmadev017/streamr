@@ -1,9 +1,10 @@
 import React from "react";
 import ProfileAll from "./ProfileAll"; 
 import ProfileSections from "./profileSections";
+import { tab } from "@/app/(workspace)/profile/page";
 
 interface Props {
-  activeTab: "all" | "public" | "private" | "creations" | "liked";
+  activeTab: tab;
   publicPlaylists: any[];
   privatePlaylists: any[];
   userCreations: any[];

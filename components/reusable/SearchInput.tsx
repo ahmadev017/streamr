@@ -17,6 +17,7 @@ const SearchInput: React.FC<inputProps> = ({ placeholder, paddingY = "2" }) => {
       <Input
         className={`rounded-full pl-12 py-${paddingY}`}
         placeholder={placeholder}
+        
       />
     </div>
   )

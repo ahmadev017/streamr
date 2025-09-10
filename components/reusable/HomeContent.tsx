@@ -58,7 +58,7 @@ const HomeContent: React.FC<HomeProps> = ({ title, data, pl }) => {
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
-            <div key={index} className="cursor-pointer flex flex-col gap-2 hover:bg-gray-800 p-3 rounded-md transition-colors duration-300">
+            <div key={index} className="cursor-pointer flex flex-col gap-2 hover:bg-gray-300 dark:hover:bg-gray-800 p-3 rounded-md transition-colors duration-300">
               <div className="relative aspect-square group/card rounded-md overflow-hidden">
               <Image src={item.image} alt={item.name} fill className="object-cover"/>
               <PlayPauseBtn/>

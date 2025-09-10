@@ -2,6 +2,8 @@
 export const getPlaying = () => {
   return {
     title: "Midnight Serenade",
+    createdBy:"Sophia",
+    createrProfile:"/profile.png",
     image: "/playing.png",
     artist: "Olivia Moore",
     artistImage: "/artist.png",

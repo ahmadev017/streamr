@@ -21,7 +21,7 @@ const ProfileSections: React.FC<HomeProps> = ({ title, data, pl }) => {
       <div className="w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {data.map((item, index) => (
          
-           <div key={index} className="cursor-pointer flex flex-col gap-2 hover:bg-gray-800 p-3 rounded-md transition-colors duration-300">
+           <div key={index} className="cursor-pointer flex flex-col gap-2 hover:bg-gray-300 dark:hover:bg-gray-800  p-3 rounded-md transition-colors duration-300">
             <div className="relative aspect-square group/card rounded-md overflow-hidden">
               <Image src={item.image} alt={item.name} fill className="object-cover"/>
               <PlayPauseBtn/>

@@ -2,9 +2,10 @@
 import ProfileAllSections from "@/components/profilePage/profileAllSections";
 import ProfileInfo from "@/components/profilePage/profileInfo";
 import ProfileNavs from "@/components/profilePage/ProfileNavs";
-import { SidebarTrigger } from "@/components/ui/sidebar";
 import {getLiked,getPrivatePlaylists,getPublicPlaylists,getUserCreations,} from "@/lib/profile";
 import React, { useState } from "react";
+
+export type tab = "all" | "public" | "private" | "creations" | "liked"
 
 const Page = () => {
   const publicPlaylists = getPublicPlaylists();
@@ -13,7 +14,7 @@ const Page = () => {
   const liked = getLiked();
 
   const [activeTab, setActiveTab] = useState<
-    "all" | "public" | "private" | "creations" | "liked"
+    tab
   >("all");
 
   return (

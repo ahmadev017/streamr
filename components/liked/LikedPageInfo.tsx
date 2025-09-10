@@ -1,31 +1,21 @@
-import Image from 'next/image'
-import React from 'react'
-import SearchInput from '../reusable/SearchInput'
-import { getLikedSongs } from '@/lib/liked'
 
-const LikedPageInfo = () => {
-    const likedSongs = getLikedSongs()
+import { Suspense, use } from "react";
+import { getLikedSongs, type Song } from "@/lib/liked";
+import LikedInfoSkeleton from "./LikedInfoSkeleton";
+import LikedInfoContent from "./LikedInfoContent";
+
+
+
+
+
+
+export default async function LikedPageInfo() {
+  const likedSongs = await getLikedSongs();
+
   return (
-    <div className='p-2 flex flex-col gap-4'>
-        <div className="flex flex-col gap-2">
-        <Image
-          src={likedSongs[0].image}
-          alt="liked"
-          width={100}
-          height={100}
-          className="rounded-lg"
-        />
-        <div className="flex gap-6 items-center">
-          <h1 className="text-lg font-bold">Liked Songs</h1>
-          
-        </div>
-      </div>
-      
-      <div>
-        <SearchInput placeholder="Search" paddingY="2" />
-      </div>
-      </div>
-  )
+    <Suspense fallback={<LikedInfoSkeleton />}>
+      <LikedInfoContent songPromise={likedSongs[0]} />
+    </Suspense>
+  );
 }
 
-export default LikedPageInfo
